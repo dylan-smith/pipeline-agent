@@ -16,7 +16,7 @@
       "description": "The URL of your Azure DevOps instance (e.g. https://dev.azure.com/foo or http://tfs.foo.com:8080/tfs)"
     },
     "pat": {
-      "type": "string",
+      "type": "securestring",
       "displayName": "PAT",
       "description": "Personal Access Token that has permissions to register a new agent - will only be used at registration time"
     },
