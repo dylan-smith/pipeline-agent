@@ -13,6 +13,6 @@ wget -O pipelines-agent.tar.gz https://vstsagentpackage.azureedge.net/agent/2.15
 mkdir agent
 cd agent
 tar zxvf ../pipelines-agent.tar.gz
-./config.sh --unattended --url $1 --auth pat --token $2 --pool $3 --acceptTeeEula
+sudo ./config.sh --unattended --url $1 --auth pat --token $2 --pool $3 --acceptTeeEula
 sudo ./svc.sh install
 sudo ./svc.sh start
