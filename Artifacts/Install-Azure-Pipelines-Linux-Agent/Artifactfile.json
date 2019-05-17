@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+  "title": "Azure Pipelines Linux Agent",
+  "publisher": "Dylan Smith",
+  "description": "Install an Azure Pipelines Agent on Linux",
+  "tags": [
+    "Azure Pipelines",
+    "Linux"
+  ],
+  "iconUri": "https://raw.githubusercontent.com/dylan-smith/pipeline-agent/master/Artifacts/Install-Azure-Pipelines-Linux-Agent/agentArtifact.png",
+  "targetOsType": "Linux",
+  "parameters": {
+    "url": {
+      "type": "string",
+      "displayName": "URL",
+      "description": "The URL of your Azure DevOps instance (e.g. https://dev.azure.com/foo or http://tfs.foo.com:8080/tfs)"
+    },
+    "pat": {
+      "type": "secureString",
+      "displayName": "PAT",
+      "description": "Personal Access Token that has permissions to register a new agent - will only be used at registration time"
+    },
+    "pool": {
+      "type": "string",
+      "displayName": "Pool Name",
+      "description": "The name of the Agent Pool that this agent will be registered in"
+    }
+  },
+  "runCommand": {
+    "commandToExecute": "[concat('sh install-azure-pipelines-linux-agent.sh', ' ', parameters('url'), ' ', parameters('pat'), ' \"', parameters('pool'), '\"')]"
+  }
+}
