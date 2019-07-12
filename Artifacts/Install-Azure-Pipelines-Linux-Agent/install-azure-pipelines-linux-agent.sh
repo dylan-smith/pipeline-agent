@@ -17,5 +17,6 @@ wget -O pipelines-agent.tar.gz https://vstsagentpackage.azureedge.net/agent/2.15
 tar zxvf pipelines-agent.tar.gz
 export AGENT_ALLOW_RUNASROOT=true
 ./config.sh --unattended --url $1 --auth pat --token $2 --pool $3 --agent $4 --once --acceptTeeEula
-sudo ./svc.sh install
-sudo ./svc.sh start
+./run.sh --once
+#sudo ./svc.sh install
+#sudo ./svc.sh start
