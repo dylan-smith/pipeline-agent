@@ -9,6 +9,6 @@
   "iconUri": "https://raw.githubusercontent.com/dylan-smith/pipeline-agent/master/Artifacts/Install-Azure-Pipelines-Linux-Agent/agentArtifact.png",
   "targetOsType": "Windows",
   "runCommand": {
-    "commandToExecute": "powershell something.ps1"
+    "commandToExecute": "powershell HexagonConfigureBuildAgent.ps1"
   }
 }
