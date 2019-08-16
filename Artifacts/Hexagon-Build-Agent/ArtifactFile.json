@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+  "title": "Hexagon - Configure Build Server",
+  "publisher": "Dylan Smith",
+  "description": "Configure a Hexagon Build Server",
+  "tags": [
+    "Azure Pipelines"
+  ],
+  "iconUri": "https://raw.githubusercontent.com/dylan-smith/pipeline-agent/master/Artifacts/Install-Azure-Pipelines-Linux-Agent/agentArtifact.png",
+  "targetOsType": "Windows",
+  "runCommand": {
+    "commandToExecute": "powershell something.ps1"
+  }
+}
